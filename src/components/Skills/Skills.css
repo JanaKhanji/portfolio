@@ -1,0 +1,47 @@
+.service-item .html-service-icon {
+    background-image: url(./icons/html-white-icon.png);
+}
+
+.service-item:hover .html-service-icon {
+    background-image: url(./icons//html-main-icon.png);
+}
+
+.service-item .react-service-icon {
+    background-image: url(./icons/react-white-icon.png);
+}
+
+.service-item:hover .react-service-icon {
+    background-image: url(./icons//react-main-icon.png);
+}
+
+.service-item .angular-service-icon {
+    background-image: url(./icons/angular-white-icon.png);
+}
+
+.service-item:hover .angular-service-icon {
+    background-image: url(./icons/angular-main-icon.png);
+}
+
+.service-item .ionic-service-icon {
+    background-image: url(./icons/ionic-white-icon.png);
+}
+
+.service-item:hover .ionic-service-icon {
+    background-image: url(./icons/ionic-main-icon.png);
+}
+
+.service-item .git-service-icon {
+    background-image: url(./icons/git-white-icon.png);
+}
+
+.service-item:hover .git-service-icon {
+    background-image: url(./icons/git-main-icon.png);
+}
+
+.service-item .js-service-icon {
+    background-image: url(./icons/js-white-icon.png);
+}
+
+.service-item:hover .js-service-icon {
+    background-image: url(./icons/js-main-icon.png);
+}
