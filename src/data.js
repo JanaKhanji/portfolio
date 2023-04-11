@@ -8,7 +8,7 @@ export const menu = [
 
 export const work=[
   [{id:2,link: "https://github.com/JanaKhanji/e-track-web", name:"E-Track" , desc:"An online-customized bullet journal", imgSrc:"assets/images/work01.jpg"},
-  {id:1,link: "https://6gxzi.csb.app/", name:"Watchy" , desc:"Find your movies", imgSrc:"assets/images/work02.jpg"},
+  {id:1,link: "https://watchy-movies-app.vercel.app/", name:"Watchy" , desc:"Find your movies", imgSrc:"assets/images/work02.jpg"},
   ],
   [{id:3,link: "http://www.futurecompany.info/", name:"Future Company" , desc:"Future Company Exhibition Website", imgSrc:"assets/images/work03.jpg"},
   {id:4,link: "https://janakhanji.github.io/ArtGallery/home", name:"Art Gallery" , desc:"My Art Portfolio", imgSrc:"assets/images/work04.jpg"}

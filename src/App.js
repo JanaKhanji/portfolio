@@ -40,22 +40,22 @@ function App() {
   return (
     <div className="App">
       <div id="page-wraper">
-      <Sidebar  scrollTo={scrollTo} />
-      <div ref={AboutSection}>
-      <About />
-      </div>
-      <div ref={SkillsSection}>
-      <Skills />
-      </div>
-      <div ref={WorkSection}>
-      <Work />
-      </div>
-      <div ref={ExperienceSection}>
-      <Experience />
-      </div>
-      <div ref={ContactSection}>
-      <Contact />
-      </div>
+        <Sidebar  scrollTo={scrollTo} />
+        <div ref={AboutSection}>
+          <About />
+        </div>
+        <div ref={SkillsSection}>
+          <Skills />
+        </div>
+        <div ref={WorkSection}>
+          <Work />
+        </div>
+        <div ref={ExperienceSection}>
+          <Experience />
+        </div>
+        <div ref={ContactSection}>
+          <Contact />
+        </div>
       </div>
     </div>
   );
