@@ -23,7 +23,7 @@ function Sidebar({scrollTo}){
             </i>
             <div className="container">
               <div className="image">
-                <a href="/"><img src="../assets/images/profile.jpg" alt="Profile" /></a>
+                <a href="/"><img src="../assets/images/profile.jpeg" alt="Profile" /></a>
               </div>
               <div className="author-content">
                 <h4>Jana Khanji</h4>
