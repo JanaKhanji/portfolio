@@ -11,8 +11,7 @@ function Experience(){
         {
         experiences.map((element,index)=> { return (
             <div className="right-image-post" key={index}>
-              <div className="row">
-
+              <div className="row mb-5">
                 <div className="col-md-4">
                   <div className="left-image">
                     <a href={element.link} target="_blank">
@@ -20,7 +19,7 @@ function Experience(){
                             <img src={element.imgSrc} alt={element.title} />
                         </div>
                     </a>
-                    <p>{element.date}</p>
+                    <p className="text-left text-md-center">{element.date}</p>
                   </div>
                 </div>
 
@@ -30,14 +29,35 @@ function Experience(){
                     <p>
                      {element.desc}
                     </p>
-                    <p>
-                        My responsibilities: 
-                    </p>
-                    <ul>
-                        {element.responsibilities.map((el)=>{
-                            return (<li>{el}</li>)
-                        })}
-                    </ul>
+                    {
+                      element.responsibilities.length > 0 &&
+                      <>
+                        <p>
+                            My responsibilities: 
+                        </p>
+                        <ul>
+                            {element.responsibilities.map((el, index)=>{
+                                return (<li key={index}>{el}</li>)
+                            })}
+                        </ul>
+                      </>
+                    }
+                    {
+                      element.technologies.length > 0 &&
+                      <>
+                        <p>
+                           <span> Technologies Used:  </span>
+                            {element.technologies.map((el, index)=>{
+                                return (<span key={index}>
+                                  {el}
+                                  {
+                                    index !== element.technologies.length -1 && <>,  </>
+                                  }
+                                 </span>)
+                            })}
+                        </p>
+                      </>
+                    }
                   </div>
                 </div>
               </div>

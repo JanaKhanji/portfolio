@@ -11,49 +11,54 @@ function App() {
   const WorkSection = useRef(null);
   const ContactSection = useRef(null);
   const ExperienceSection = useRef(null);
+
   const scrollTo = (Ref) => {
     let reference=null;
     switch(Ref){
-        case "about":
-          reference=AboutSection.current;
-          break
-          case "skills":
-          reference= SkillsSection.current;
-          break
-          case "projects":
-          reference=WorkSection.current;
-          break
-          case "contact":
-          reference=ContactSection.current;
-          break
-          case "experiences":
-          reference=ExperienceSection.current;
-          break
-          default:  
-          reference=AboutSection.current;
+      case "skills":
+        reference= SkillsSection.current;
+        break
+      case "projects":
+        reference=WorkSection.current;
+        break
+      case "contact":
+        reference=ContactSection.current;
+        break
+      case "experiences":
+        reference=ExperienceSection.current;
+        break
+      default:  
+        reference=AboutSection.current;
     }
-    window.scrollTo({
-      top: reference.offsetTop,
-      behavior: 'smooth',
-    });
+    if (Ref === 'about') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: reference.offsetTop,
+        behavior: 'smooth',
+      });
+    }
   };
   return (
     <div className="App">
       <div id="page-wraper">
-        <Sidebar  scrollTo={scrollTo} />
-        <div ref={AboutSection}>
+        <Sidebar scrollTo={scrollTo}/>
+        <div ref={AboutSection} id='AboutSection'>
           <About />
         </div>
-        <div ref={SkillsSection}>
+        <div ref={SkillsSection} id='SkillsSection'>
           <Skills />
         </div>
-        <div ref={WorkSection}>
-          <Work />
-        </div>
-        <div ref={ExperienceSection}>
+        <div ref={ExperienceSection} id='ExperienceSection'>
           <Experience />
         </div>
-        <div ref={ContactSection}>
+        <div ref={WorkSection} id='WorkSection'>
+          <Work />
+        </div>
+        <div ref={ContactSection} id='ContactSection'>
           <Contact />
         </div>
       </div>

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React,{useState} from 'react';
+import React,{ useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faGithubSquare} from "@fortawesome/free-brands-svg-icons";
 import {faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
@@ -12,6 +12,28 @@ import { menu } from '../data';
 function Sidebar({scrollTo}){
   const [menuStatus,setMenuStatus]=useState("");
   const [activeTab,setActiveTab]=useState(menu[0].section);
+
+  document.body.onscroll = function() {
+    const experiences = document.getElementById("ExperienceSection").getBoundingClientRect();
+    const skills = document.getElementById("SkillsSection").getBoundingClientRect();
+    const projects = document.getElementById("WorkSection").getBoundingClientRect();
+    const contact = document.getElementById("ContactSection").getBoundingClientRect();
+    if (window.scrollY===0) {
+      setActiveTab('about')
+    }
+    if (skills.top < window.innerHeight - 200 && skills.bottom >= window.innerHeight && activeTab !== 'skills') {
+      setActiveTab('skills')
+    }
+    if (experiences.top < window.innerHeight -400 && experiences.bottom >= window.innerHeight && activeTab !== 'experiences') {
+      setActiveTab('experiences')
+    }
+    if (projects.top < window.innerHeight -100 && projects.bottom >= window.innerHeight && activeTab !== 'projects') {
+      setActiveTab('projects')
+    }
+    if (contact.top < window.innerHeight -400 && contact.bottom >= window.innerHeight && activeTab !== 'contact') {
+      setActiveTab('contact')
+    }
+  }
     return (
         <div className="responsive-nav">
           <i id="menu-toggle" onClick={()=>{setMenuStatus("open")}}>
@@ -27,15 +49,15 @@ function Sidebar({scrollTo}){
               </div>
               <div className="author-content">
                 <h4>Jana Khanji</h4>
-                <span>Web Developer</span>
+                <span>Software Engineer</span>
               </div>
               <nav className="main-nav" role="navigation">
                 <ul className="main-menu">
-                  {menu.map((element)=>{
+                  {menu.map((element, index)=>{
                     return (
-                      <li 
+                      <li key={index}
                       className={activeTab===element.section ? "active" : ""}
-                      onClick={()=>{scrollTo(element.section);setActiveTab(element.section)}}>
+                      onClick={()=>{scrollTo(element.section)}}>
                         <a href="#" onClick={(e)=>e.preventDefault()}>
                           {element.name}
                         </a>

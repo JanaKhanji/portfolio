@@ -45,3 +45,19 @@
 .service-item:hover .js-service-icon {
     background-image: url(./icons/js-main-icon.png);
 }
+
+.service-item .java-service-icon {
+    background-image: url(./icons/java-white-icon.png);
+}
+
+.service-item:hover .java-service-icon {
+    background-image: url(./icons/java-main-icon.png);
+}
+
+.service-item .postgres-service-icon {
+    background-image: url(./icons/postgres-white-icon.png);
+}
+
+.service-item:hover .postgres-service-icon {
+    background-image: url(./icons/postgres-main-icon.png);
+}
