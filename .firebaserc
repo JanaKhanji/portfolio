@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "janakhanji-portfolio"
-  }
+  },
+  "targets": {
+    "janakhanji-portfolio": {
+      "hosting": {
+        "janakhanji-portfolio": [
+          "janakhanji-portfolio"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }

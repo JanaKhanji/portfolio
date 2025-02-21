@@ -1,5 +1,6 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';   // for cloud firestore
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
 const firebaseConfig = {
   apiKey: "AIzaSyD5kcdxhcxF08XTjSNSFoZnz633O4rMT0w",
   authDomain: "janakhanji-portfolio.firebaseapp.com",
@@ -7,7 +8,9 @@ const firebaseConfig = {
   storageBucket: "janakhanji-portfolio.appspot.com",
   messagingSenderId: "639241714255",
   appId: "1:639241714255:web:6902d020864d0bab3fc83a"
-  };
+};
 
-firebase.initializeApp(firebaseConfig);
-export const db=firebase.firestore();
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export { db };
