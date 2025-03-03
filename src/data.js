@@ -41,7 +41,7 @@ export const experiences = [
     'Evaluate new and emerging technologies for implementation.'
   ],  imgSrc:"assets/images/experience05.png",
   date:"August 2023 - Present",
-  technologies: ['Java - SpringBoot', 'PostgreSQL', 'Angular', 'Tailwind', 'DaisyUI'],
+  technologies: ['Java - SpringBoot', 'PostgreSQL', 'Angular', 'Tailwind', 'DaisyUI', 'NestJS'],
   left: false,
   },
 
