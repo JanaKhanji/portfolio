@@ -23,17 +23,8 @@ export const skills = [
 ].sort((a,b) => a.id - b.id);
 
 export const experiences = [
-  {id:5, link: "https://ceevy.co/", name:"Ceevy",
-    desc: `Ceevy uses AI to transform your existing CV into a polished and professional document, along with a cover letter.`,
-    responsibilities: [
-      'Build a user-friendly and responsive website with a clean and modern design.',
-    ],
-    imgSrc:"assets/images/experience04.png",
-    date:"Feb 2024 - Present",
-    technologies: ['Angular', 'Tailwind', 'DaisyUI'],
-    left: true,
-    },
-  {id:4, link: "https://www.arcusscale.com/", name:"ArcusScale",
+ 
+  {id:5, link: "https://www.arcusscale.com/", name:"ArcusScale",
   desc: `ArcusScale is a prominent leader in software engineering and technology consulting, dedicated to transforming your concepts into reliable software solutions.`,
   responsibilities: [
     'Participate in team-based activities for architecture design and creation of requirements.',
@@ -44,6 +35,16 @@ export const experiences = [
   technologies: ['Java - SpringBoot', 'PostgreSQL', 'Angular', 'Tailwind', 'DaisyUI', 'NestJS'],
   left: false,
   },
+  {id:4, link: "https://ceevy.co/", name:"Ceevy",
+    desc: `Ceevy uses AI to transform your existing CV into a polished and professional document, along with a cover letter.`,
+    responsibilities: [
+      'Build a user-friendly and responsive website with a clean and modern design.',
+    ],
+    imgSrc:"assets/images/experience04.png",
+    date:"Feb 2024 - Dec 2024",
+    technologies: ['Angular', 'Tailwind', 'DaisyUI'],
+    left: true,
+    },
 
   {id:3, link: "https://supportful.world/", name:"Supportful",
   desc: `Supportful helps companies grow their software engineering teams by providing outstanding talents in staff augmentation mode.`,
